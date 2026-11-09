@@ -1,0 +1,33 @@
+{
+  "candidate": {
+    "id": "dcc5e86f84bd4d6ba742b477394bb31a",
+    "job_id": "79d4514ed39e461d99a06464f25f48a2",
+    "repair_attempt": 1,
+    "created_at": 1793903494.8856592,
+    "sha": "537c4d3a093a7f2afeecee165199ddfa23cb0dfa",
+    "source_manifest_digest": "96d337533c402892c0333fde68fb2e4e2d08134feba84424968b15c7966319ed",
+    "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+    "detection_id": "26ebf55b278b47988ccf2713ca516121",
+    "attempt_id": "01-1a5e3b947d4c480c8f5de45d00446ef9",
+    "patch_digest": "bf9d6e0c33f9fc15f5d2af8b7bf072a0f96fd9d93c31f15bd89642db63b9c16d",
+    "artifact_digest": "c5a85052476c0b98c69defb83f3729042c3a7d4ca8dfe7fb5c74a38a5a689dee",
+    "provider": "offline",
+    "diagnosis": "The exclusive slice endpoint removes one requested item.",
+    "changed_files": [
+      "pagination.py"
+    ],
+    "status": "proposed",
+    "verification_id": null
+  },
+  "reproduction_sha": "537c4d3a093a7f2afeecee165199ddfa23cb0dfa",
+  "failure_signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+  "state": "repairing",
+  "reproduction_containers": [
+    "49f2852821363e39d743f8deb24b3c3706a5c760ce4c7cdcb887eaba857a62c3",
+    "9c25c757471c7ab27838217463a4025a5e40500464c72afe9f26b90c6defdfa8"
+  ],
+  "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+  "verified": false,
+  "phase8_verification": "not_run",
+  "fixture_unchanged": true
+}

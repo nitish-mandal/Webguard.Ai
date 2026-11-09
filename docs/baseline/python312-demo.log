@@ -1,0 +1,17 @@
+COMMAND: .venv\Scripts\python.exe -m pytest demo-repository/tests -q
+F.                                                                       [100%]
+================================== FAILURES ===================================
+__________________ test_first_page_contains_requested_count ___________________
+
+    def test_first_page_contains_requested_count():
+>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]
+E       assert [10] == [10, 20]
+E         
+E         Right contains one more item: 20
+E         Use -v to get more diff
+
+demo-repository\tests\test_pagination.py:13: AssertionError
+=========================== short test summary info ===========================
+FAILED demo-repository/tests/test_pagination.py::test_first_page_contains_requested_count
+1 failed, 1 passed in 0.12s
+exit_code=1

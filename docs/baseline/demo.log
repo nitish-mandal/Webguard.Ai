@@ -1,0 +1,5 @@
+COMMAND: .venv/Scripts/python.exe -m pytest demo-repository/tests
+Program 'python.exe' failed to run: An Application Control policy has blocked this fileAt line:2 char:444
++ ...  $log; try { & .\.venv\Scripts\python.exe @($check.Args) 2>&1 | Out-F ...
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+BLOCKED: process could not start; no test result

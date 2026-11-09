@@ -1,0 +1,11 @@
+2026-11-04, Asia/Calcutta
+Initial discovery (before local runtime downloads):
+Get-Command python,py,node,npm,pnpm,yarn,uv,pip,git,docker:
+  py.exe, uv.exe and git.exe found; others not found.
+py -0p: No installed Pythons found!
+uv --version: uv 0.13.0 (4ecd0eff2 2026-10-09 x86_64-pc-windows-msvc)
+git --version: git version 2.55.0.windows.5
+git status --short: fatal: not a git repository (or any parent)
+Docker standard CLI directory absent; no engine verified.
+No AGENTS.md found in supplied workspace inventory.
+This is a transcription of initial tool output; raw subsequent logs are adjacent.

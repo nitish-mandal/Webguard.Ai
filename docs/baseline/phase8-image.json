@@ -1,0 +1,8 @@
+{
+    "image_id":  "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "profile_digest":  "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+    "base":  "python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30",
+    "python":  "3.12.16",
+    "os":  "linux",
+    "architecture":  "amd64"
+}

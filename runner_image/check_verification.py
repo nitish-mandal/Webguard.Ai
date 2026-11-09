@@ -1,0 +1,28 @@
+"""Phase 8 real acceptance. All three cases must pass without skips."""
+
+import json
+import subprocess
+import sys
+import tempfile
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main():
+    with tempfile.TemporaryDirectory(prefix='webguard-verification-gate-') as directory:
+        receipt = Path(directory) / 'results.xml'
+        process = subprocess.run([sys.executable, '-m', 'pytest', 'worker/tests/test_verification_docker.py',
+                                  '-q', '-r', 's', f'--junitxml={receipt}'], cwd=ROOT, shell=False, check=False)
+        cases = list(ET.parse(receipt).iter('testcase')) if receipt.is_file() and receipt.stat().st_size <= 2097152 else []
+        skipped = sum(item.find('skipped') is not None for item in cases)
+        failures = sum(item.find('failure') is not None or item.find('error') is not None for item in cases)
+        status = 'failed' if process.returncode or failures else ('blocked' if skipped or len(cases) != 3 else 'passed')
+        print(json.dumps({'verification_acceptance': status, 'tests': len(cases), 'skipped': skipped,
+                          'failures': failures, 'provider': 'offline', 'publication': 'not_run'}, sort_keys=True))
+        return {'passed': 0, 'blocked': 2, 'failed': 1}[status]
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

@@ -1,0 +1,26 @@
+[
+    {
+        "Name":  "passed",
+        "Count":  7
+    },
+    {
+        "Name":  "test_failure",
+        "Count":  3
+    },
+    {
+        "Name":  "timeout",
+        "Count":  2
+    },
+    {
+        "Name":  "output_limit",
+        "Count":  1
+    },
+    {
+        "Name":  "cancelled",
+        "Count":  1
+    },
+    {
+        "Name":  "oom",
+        "Count":  1
+    }
+]

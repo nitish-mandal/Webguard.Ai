@@ -1,0 +1,26 @@
+{
+  "repository": "nitish-mandal/webguard-live-demo",
+  "branch": "main",
+  "commit_sha": "559a0f4a3915827004c1307b34fda3fceeb009ad",
+  "tree_truncated": false,
+  "files": {
+    "README.md": {
+      "exists": true,
+      "regular_file": true,
+      "exact_bytes_match": false,
+      "match_after_crlf_normalization": true,
+      "remote_sha256": "245508725f084204676aeb5e0169de6e4b3b59145cc10613248d13722fae2e30"
+    },
+    "pagination.py": {
+      "exists": false
+    },
+    "tests/test_pagination.py": {
+      "exists": false
+    }
+  },
+  "listed_paths": [
+    "README.md"
+  ],
+  "credentials_sent": false,
+  "target_execution": false
+}

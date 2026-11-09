@@ -1,0 +1,181 @@
+{
+  "verdict": "reproduced",
+  "job_id": "3ee9a11967ee4a0da155ae1263b918dc",
+  "state": "reproduced",
+  "sha": "86c7a417122b13fa1f6aa79f5d17f4e422bcd86c",
+  "failing_test_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+  "failure_signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+  "artifact_digest": "a407fef9e58ca2512ffadf5f4fe8d58c7139d849b3df70462d1cf5774f4eb917",
+  "runs": [
+    {
+      "run_id": "f937465f3a3149bab9f086526d9f09d9",
+      "container_id": "fabf6a44c75bf5d2ca9e1bfcd205db1357dedfe4b8ee6bae817dff51b5374cb7",
+      "source_sha": "86c7a417122b13fa1f6aa79f5d17f4e422bcd86c",
+      "input_digest": "d04609f7cbb4a838692c7d2ba12150a185926cc778972376e599deb236ec91d8",
+      "exit_code": 1,
+      "duration_seconds": 4.906,
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "cleanup_complete": true,
+      "test_report": {
+        "schema": 1,
+        "complete": true,
+        "exit_code": 1,
+        "tests": [
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "setup",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "call",
+            "outcome": "failed",
+            "assertion": true,
+            "message": "assert [10] == [10, 20]\n  \n  Right contains one more item: 20\n  Use -v to get more diff",
+            "traceback": "def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError",
+            "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+            "comparison": {
+              "left": "[10]",
+              "operator": "==",
+              "right": "[10, 20]",
+              "expected": "[10, 20]",
+              "actual": "[10]",
+              "basis": "literal right-hand expectation in assertion source"
+            }
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "teardown",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "setup",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "call",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "teardown",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          }
+        ],
+        "collection_errors": []
+      }
+    },
+    {
+      "run_id": "c50633503ffd46b8a88eb6669a082e5d",
+      "container_id": "6baf2539620b7c261543c00d3ecdeac51e4e62988fb5542cb8ca02caef652222",
+      "source_sha": "86c7a417122b13fa1f6aa79f5d17f4e422bcd86c",
+      "input_digest": "d04609f7cbb4a838692c7d2ba12150a185926cc778972376e599deb236ec91d8",
+      "exit_code": 1,
+      "duration_seconds": 3.344,
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "cleanup_complete": true,
+      "test_report": {
+        "schema": 1,
+        "complete": true,
+        "exit_code": 1,
+        "tests": [
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "setup",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "call",
+            "outcome": "failed",
+            "assertion": true,
+            "message": "assert [10] == [10, 20]\n  \n  Right contains one more item: 20\n  Use -v to get more diff",
+            "traceback": "def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError",
+            "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+            "comparison": {
+              "left": "[10]",
+              "operator": "==",
+              "right": "[10, 20]",
+              "expected": "[10, 20]",
+              "actual": "[10]",
+              "basis": "literal right-hand expectation in assertion source"
+            }
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "phase": "teardown",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "setup",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "call",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          },
+          {
+            "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+            "phase": "teardown",
+            "outcome": "passed",
+            "assertion": false,
+            "message": "",
+            "traceback": "",
+            "signature": null,
+            "comparison": null
+          }
+        ],
+        "collection_errors": []
+      }
+    }
+  ]
+}

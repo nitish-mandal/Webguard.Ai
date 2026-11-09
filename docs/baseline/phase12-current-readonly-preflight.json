@@ -1,0 +1,39 @@
+{
+  "repository": "nitish-mandal/webguard-live-demo",
+  "branch": "main",
+  "both_live_flags_off": true,
+  "settings_valid": true,
+  "repository_setting_matches": true,
+  "missing_local_settings": [],
+  "bounded_settings_needing_update": {},
+  "gemini_model_matches_recommended": true,
+  "gemini_key_present": true,
+  "gemini_called": false,
+  "job_submitted": false,
+  "publication_attempted": false,
+  "docker": {
+    "ready": true,
+    "immutable_image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "service_daemon_and_image_policy": "passed",
+    "containers_started": 0,
+    "target_execution": false
+  },
+  "github_token": {
+    "valid_now": true,
+    "exact_repository_scope": true,
+    "accessible_repository_count": 1,
+    "write_permissions_independently_verified": false,
+    "repository_active": true,
+    "repository_public": true
+  },
+  "source": {
+    "commit_sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+    "commit_url": "https://github.com/nitish-mandal/webguard-live-demo/commit/b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+    "exact_demo_file_matches": {
+      "pagination.py": true,
+      "tests/test_pagination.py": true
+    },
+    "unchanged_demo_verified": true
+  },
+  "read_only_preflight_passed": true
+}

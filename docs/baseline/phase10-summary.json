@@ -1,0 +1,63 @@
+﻿{
+    "http_status":  202,
+    "image_id":  "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "live_gemini_tested":  false,
+    "simulated_drafts":  1,
+    "patch_digest":  "518e82eb4b19cce91d43f87c3618575de2f7cfc303b3879e6778f61a95460171",
+    "fixture_unchanged":  true,
+    "publication":  {
+                        "job_id":  "3786b90624d045e9b1159cfe0bfd3575",
+                        "branch":  "webguard/jobs/3786b90624d045e9b1159cfe0bfd3575",
+                        "pr_number":  1,
+                        "url":  "simulated://webguard/3786b90624d045e9b1159cfe0bfd3575/pull/1",
+                        "draft":  1,
+                        "sha":  "2de13361c14264f24c29cb2f778192c9f65858d0",
+                        "patch_digest":  "518e82eb4b19cce91d43f87c3618575de2f7cfc303b3879e6778f61a95460171",
+                        "created_at":  1793884040.6393826,
+                        "updated_at":  1793884040.6393826,
+                        "commit_sha":  "8747180c8fbd78abeeffdaf8708c3446dd1b4b5b",
+                        "marker":  "\u003c!-- webguard-ai-job:3786b90624d045e9b1159cfe0bfd3575;verification:cea0c597cabe45d6a9857806c5838e27;patch:518e82eb4b19cce91d43f87c3618575de2f7cfc303b3879e6778f61a95460171 --\u003e",
+                        "mode":  "offline",
+                        "simulated":  true
+                    },
+    "baseline_runs":  2,
+    "sha":  "2de13361c14264f24c29cb2f778192c9f65858d0",
+    "automatic":  true,
+    "worker_exit":  0,
+    "live_github_tested":  false,
+    "checks":  [
+                   {
+                       "passed":  6,
+                       "exit_code":  1,
+                       "check":  "baseline_regression",
+                       "failed":  3,
+                       "container_id":  "84bea89b858c341555c95a1212010d1d265a9bb9906a31ae595318d183767741",
+                       "cleanup_complete":  true
+                   },
+                   {
+                       "passed":  1,
+                       "exit_code":  0,
+                       "check":  "original",
+                       "failed":  0,
+                       "container_id":  "682783a27ba46349dec00926cad7fc7f2a2ff3e1abe74563729156de3afc18d5",
+                       "cleanup_complete":  true
+                   },
+                   {
+                       "passed":  2,
+                       "exit_code":  0,
+                       "check":  "suite",
+                       "failed":  0,
+                       "container_id":  "c425f929aacadaa21c8ba1ee9318612093a8c1dd27eef4d69c7cadc49cbc85ff",
+                       "cleanup_complete":  true
+                   },
+                   {
+                       "passed":  9,
+                       "exit_code":  0,
+                       "check":  "patched_regression",
+                       "failed":  0,
+                       "container_id":  "ae1121a9d053f9966f6d3339bebaaf52d06c53449869779914d9846ac8c89649",
+                       "cleanup_complete":  true
+                   }
+               ],
+    "failing_test":  "tests/test_pagination.py::test_first_page_contains_requested_count"
+}

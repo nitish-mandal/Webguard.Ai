@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webguard-ai"
+version = "0.1.0"
+description = "Fail-closed scaffold for a single-repository repair service"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "python-dotenv>=1,<2",
+    "pydantic>=2.10,<3",
+    "google-genai>=2,<3",
+    "httpx>=0.28.1,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.9,<1"]
+bootstrap = ["pip==25.0.1", "setuptools==80.9.0"]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "worker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "worker/tests", "tests"]
+markers = ["isolation: real Docker execution acceptance; skipped with explicit blockers when unavailable"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

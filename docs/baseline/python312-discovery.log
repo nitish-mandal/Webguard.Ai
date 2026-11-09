@@ -1,0 +1,5 @@
+﻿Continuation runtime discovery transcript:
+Restricted sandbox: py -3.12 --version -> No installed Python found!
+Permitted outside-sandbox retry: py -3.12 --version -> Python 3.12.10 (exit 0).
+Installed runtime: C:\Users\nitis\AppData\Local\Programs\Python\Python312\python.exe
+No Application Control bypass or new Python download was used.

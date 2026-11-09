@@ -1,0 +1,26 @@
+{
+  "credential_presence": {
+    "AUTH_TOKEN": true,
+    "GEMINI_API_KEY": true,
+    "GEMINI_MODEL": false,
+    "GITHUB_TOKEN": false
+  },
+  "settings_needing_update": {
+    "ALLOWED_REPOSITORY": "nitish-mandal/webguard-live-demo",
+    "RUNNER_IMAGE_ID": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "DATABASE_URL": "sqlite:///./data/phase12-live.db",
+    "WORKSPACE_ROOT": "workspaces-phase12-live",
+    "MAX_MODEL_CALLS_PER_JOB": "1",
+    "MAX_REPAIR_ATTEMPTS": "1",
+    "MAX_PUBLICATION_ATTEMPTS": "1",
+    "REPAIR_MAX_RETRIES": "0",
+    "REPAIR_CALL_SECONDS": "30",
+    "MAX_MODEL_TOKENS_PER_JOB": "20000",
+    "JOB_TIMEOUT_SECONDS": "300"
+  },
+  "both_live_flags_off": true,
+  "flags_changed_to_false": [],
+  "settings_validation_passed": true,
+  "supported_github_token_format": false,
+  "credentials_tested_with_providers": false
+}

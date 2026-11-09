@@ -1,0 +1,4 @@
+﻿COMMAND: .venv\Scripts\python.exe -m pytest worker/tests -q
+.                                                                        [100%]
+1 passed in 0.02s
+exit_code=0

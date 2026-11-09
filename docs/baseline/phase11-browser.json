@@ -1,0 +1,9 @@
+﻿{
+    "screenshot_verified":  false,
+    "api_stack_acceptance_is_browser_acceptance":  false,
+    "acceptance":  "blocked",
+    "computer_use_ended":  true,
+    "reason":  "Computer Use could not determine the current browser URL on Windows with enough confidence to enforce policy",
+    "initial_browser_discovery":  "The browser access host is unavailable",
+    "submitted_from_browser":  false
+}

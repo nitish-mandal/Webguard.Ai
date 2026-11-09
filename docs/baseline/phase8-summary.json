@@ -1,0 +1,121 @@
+{
+    "sha":  "3649a943b1a062c2cf05767a8437fa11b2f91013",
+    "patch_digest":  "f501acd9c5b835d4741266d0d99f5240cf1f51a36796bc83959946a493138bd5",
+    "candidate_id":  "1c17113904f247acb84d047d1f3cc57b",
+    "status":  "verified",
+    "image_id":  "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "verification_id":  "ac9aea07c7b14de2bd6192cd6e7eda00",
+    "verification_digest":  "0ff2caad332320af54c4c3d5e9bcb514709a41d8762ba29bb3f3f55719244b8e",
+    "receipt_digest_verified":  true,
+    "original_failure":  "tests/test_pagination.py::test_first_page_contains_requested_count",
+    "expected":  [
+                     10,
+                     20
+                 ],
+    "actual":  [
+                   10
+               ],
+    "checks":  [
+                   {
+                       "check":  "baseline_regression",
+                       "exit_code":  1,
+                       "container_id":  "363df0ea6fef034b0b366bec12b28a608721f22b4092d50aebeb03c1b9ac1575",
+                       "duration_seconds":  3.109,
+                       "command":  [
+                                       "python",
+                                       "-I",
+                                       "-B",
+                                       "-m",
+                                       "pytest",
+                                       "-q",
+                                       "--capture=no",
+                                       "-c",
+                                       "/opt/webguard/pytest.ini",
+                                       "-p",
+                                       "no:cacheprovider",
+                                       "-p",
+                                       "webguard_report",
+                                       "--",
+                                       "/opt/webguard/regressions/test_pagination.py"
+                                   ],
+                       "passed":  6,
+                       "failed":  3
+                   },
+                   {
+                       "check":  "original",
+                       "exit_code":  0,
+                       "container_id":  "7104e0af6d586ac69abdb8f4660405056860ba0708f6b37d027131692e420234",
+                       "duration_seconds":  3.187,
+                       "command":  [
+                                       "python",
+                                       "-I",
+                                       "-B",
+                                       "-m",
+                                       "pytest",
+                                       "-q",
+                                       "--capture=no",
+                                       "-c",
+                                       "/opt/webguard/pytest.ini",
+                                       "-p",
+                                       "no:cacheprovider",
+                                       "-p",
+                                       "webguard_report",
+                                       "--",
+                                       "tests/test_pagination.py::test_first_page_contains_requested_count"
+                                   ],
+                       "passed":  1,
+                       "failed":  0
+                   },
+                   {
+                       "check":  "suite",
+                       "exit_code":  0,
+                       "container_id":  "8005c0e90881192c67f309bb14a3d519bde8a423e5a3d6013abeef03cee81624",
+                       "duration_seconds":  3.344,
+                       "command":  [
+                                       "python",
+                                       "-I",
+                                       "-B",
+                                       "-m",
+                                       "pytest",
+                                       "-q",
+                                       "--capture=no",
+                                       "-c",
+                                       "/opt/webguard/pytest.ini",
+                                       "-p",
+                                       "no:cacheprovider",
+                                       "-p",
+                                       "webguard_report",
+                                       "tests"
+                                   ],
+                       "passed":  2,
+                       "failed":  0
+                   },
+                   {
+                       "check":  "patched_regression",
+                       "exit_code":  0,
+                       "container_id":  "311a872f334460e67d17530c238f4961860989f32b132a9435399ca9961a7668",
+                       "duration_seconds":  3.0,
+                       "command":  [
+                                       "python",
+                                       "-I",
+                                       "-B",
+                                       "-m",
+                                       "pytest",
+                                       "-q",
+                                       "--capture=no",
+                                       "-c",
+                                       "/opt/webguard/pytest.ini",
+                                       "-p",
+                                       "no:cacheprovider",
+                                       "-p",
+                                       "webguard_report",
+                                       "--",
+                                       "/opt/webguard/regressions/test_pagination.py"
+                                   ],
+                       "passed":  9,
+                       "failed":  0
+                   }
+               ],
+    "fixture_unchanged":  true,
+    "publication":  "not_run"
+}

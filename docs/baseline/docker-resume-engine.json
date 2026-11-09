@@ -1,0 +1,15 @@
+{
+    "ServerVersion":  "29.9.2",
+    "OSType":  "linux",
+    "Architecture":  "x86_64",
+    "CgroupVersion":  "2",
+    "MemoryLimit":  true,
+    "SwapLimit":  true,
+    "CpuCfsQuota":  true,
+    "PidsLimit":  true,
+    "SecurityOptions":  [
+                            "name=seccomp,profile=builtin",
+                            "name=cgroupns"
+                        ],
+    "Warnings":  null
+}

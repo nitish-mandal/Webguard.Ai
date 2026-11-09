@@ -1,0 +1,1110 @@
+{
+  "provider": "offline",
+  "live_publication_tested": false,
+  "simulated_drafts": 1,
+  "sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+  "original_failure": {
+    "run_id": "ab7303e421f3424cabf882cbe0f88afa",
+    "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+    "source_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+    "source_manifest_digest": "fac92e7cd643a85198e7af03ec8bf37e3ab5006639fe139a6088ee8183311819",
+    "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+    "input_digest": "6b50070766dbf0ec2d18be75eb3c37f2a6780e23a9dcdc743961444ff4c20b9a",
+    "patch_digest": null,
+    "outcome": "test_failure",
+    "reason": "pytest_exit_1",
+    "exit_code": 1,
+    "duration_seconds": 3.75,
+    "test_duration_seconds": 0.868428,
+    "stdout": "F.\n=================================== FAILURES ===================================\n___________________ test_first_page_contains_requested_count ___________________\n\n    def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError\n=========================== short test summary info ============================\nFAILED ../../opt/webguard/test_pagination.py::test_first_page_contains_requested_count\n1 failed, 1 passed in 0.05s\n\nWEBGUARD_PYTEST_REPORT={\"schema\":1,\"complete\":true,\"exit_code\":1,\"tests\":[{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"call\",\"outcome\":\"failed\",\"assertion\":true,\"message\":\"assert [10] == [10, 20]\\n  \\n  Right contains one more item: 20\\n  Use -v to get more diff\",\"traceback\":\"def test_first_page_contains_requested_count():\\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\\nE       assert [10] == [10, 20]\\nE         \\nE         Right contains one more item: 20\\nE         Use -v to get more diff\\n\\ntests/test_pagination.py:13: AssertionError\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"}],\"collection_errors\":[]}\n",
+    "stderr": "",
+    "output_truncated": false,
+    "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "container_id": "b46547d2bdae92dcd1f614383d99aa94a926bd45dec975458fdb8839294b55bb",
+    "effective_settings": {
+      "network": "none",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "no_new_privileges": true,
+      "host_bind_mounts": false,
+      "source_read_only": true,
+      "memory_bytes": 134217728,
+      "memory_swap_bytes": 134217728,
+      "nano_cpus": 1000000000,
+      "pids": 64,
+      "scratch_bytes": 33554432,
+      "tmp_bytes": 8388608,
+      "shm_bytes": 1048576,
+      "log_driver": "none"
+    },
+    "cleanup_complete": true,
+    "test_report": {
+      "schema": 1,
+      "complete": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "phase": "setup",
+          "outcome": "passed",
+          "assertion": false,
+          "message": "",
+          "traceback": "",
+          "signature": null,
+          "comparison": null
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "phase": "call",
+          "outcome": "failed",
+          "assertion": true,
+          "message": "assert [10] == [10, 20]\n  \n  Right contains one more item: 20\n  Use -v to get more diff",
+          "traceback": "def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError",
+          "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+          "comparison": {
+            "left": "[10]",
+            "operator": "==",
+            "right": "[10, 20]",
+            "expected": "[10, 20]",
+            "actual": "[10]",
+            "basis": "literal right-hand expectation in assertion source"
+          }
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "phase": "teardown",
+          "outcome": "passed",
+          "assertion": false,
+          "message": "",
+          "traceback": "",
+          "signature": null,
+          "comparison": null
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+          "phase": "setup",
+          "outcome": "passed",
+          "assertion": false,
+          "message": "",
+          "traceback": "",
+          "signature": null,
+          "comparison": null
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+          "phase": "call",
+          "outcome": "passed",
+          "assertion": false,
+          "message": "",
+          "traceback": "",
+          "signature": null,
+          "comparison": null
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+          "phase": "teardown",
+          "outcome": "passed",
+          "assertion": false,
+          "message": "",
+          "traceback": "",
+          "signature": null,
+          "comparison": null
+        }
+      ],
+      "collection_errors": []
+    },
+    "command": [
+      "python",
+      "-I",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "--capture=no",
+      "-c",
+      "/opt/webguard/pytest.ini",
+      "-p",
+      "no:cacheprovider",
+      "-p",
+      "webguard_report",
+      "tests"
+    ],
+    "check": "suite"
+  },
+  "verification": {
+    "outcome": "verified",
+    "reason": "all_required_checks_passed",
+    "candidate_id": "c326651ffaf4422997c23e00809a8994",
+    "round_id": "ddd54f9526ca444abdc9b73a4cac739e",
+    "artifact_digest": "0afccd705f5fa5acd2eb9e334a489d6cbc8fb0c5f479411ac200362151214a64",
+    "runs": {
+      "baseline_regression": {
+        "run_id": "efb866e8528947db8e71584fd582fe36",
+        "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+        "source_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+        "source_manifest_digest": "fac92e7cd643a85198e7af03ec8bf37e3ab5006639fe139a6088ee8183311819",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "input_digest": "9e9ca2f8cb9336d57eb0936b8bf88602d115843c192ad8a6e1abe0052dfc8872",
+        "patch_digest": null,
+        "outcome": "test_failure",
+        "reason": "pytest_exit_1",
+        "exit_code": 1,
+        "duration_seconds": 3.578,
+        "test_duration_seconds": 0.765538,
+        "stdout": "FFF......\n=================================== FAILURES ===================================\n_______________________________ test_full_first ________________________________\n\n    def test_full_first():\n>       assert target.page_items([1, 2, 3, 4], 0, 2) == [1, 2]\nE       assert [1] == [1, 2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:13: AssertionError\n_______________________________ test_full_second _______________________________\n\n    def test_full_second():\n>       assert target.page_items([1, 2, 3, 4], 1, 2) == [3, 4]\nE       assert [3] == [3, 4]\nE         \nE         Right contains one more item: 4\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:17: AssertionError\n______________________________ test_page_size_one ______________________________\n\n    def test_page_size_one():\n>       assert target.page_items([7, 8], 1, 1) == [8]\nE       assert [] == [8]\nE         \nE         Right contains one more item: 8\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:21: AssertionError\n=========================== short test summary info ============================\nFAILED ../../opt/webguard/regressions/test_pagination.py::test_full_first - a...\nFAILED ../../opt/webguard/regressions/test_pagination.py::test_full_second - ...\nFAILED ../../opt/webguard/regressions/test_pagination.py::test_page_size_one\n3 failed, 6 passed in 0.08s\n\nWEBGUARD_PYTEST_REPORT={\"schema\":1,\"complete\":true,\"exit_code\":1,\"tests\":[{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"call\",\"outcome\":\"failed\",\"assertion\":true,\"message\":\"assert [1] == [1, 2]\\n  \\n  Right contains one more item: 2\\n  Use -v to get more diff\",\"traceback\":\"def test_full_first():\\n>       assert target.page_items([1, 2, 3, 4], 0, 2) == [1, 2]\\nE       assert [1] == [1, 2]\\nE         \\nE         Right contains one more item: 2\\nE         Use -v to get more diff\\n\\n/opt/webguard/regressions/test_pagination.py:13: AssertionError\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"call\",\"outcome\":\"failed\",\"assertion\":true,\"message\":\"assert [3] == [3, 4]\\n  \\n  Right contains one more item: 4\\n  Use -v to get more diff\",\"traceback\":\"def test_full_second():\\n>       assert target.page_items([1, 2, 3, 4], 1, 2) == [3, 4]\\nE       assert [3] == [3, 4]\\nE         \\nE         Right contains one more item: 4\\nE         Use -v to get more diff\\n\\n/opt/webguard/regressions/test_pagination.py:17: AssertionError\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"call\",\"outcome\":\"failed\",\"assertion\":true,\"message\":\"assert [] == [8]\\n  \\n  Right contains one more item: 8\\n  Use -v to get more diff\",\"traceback\":\"def test_page_size_one():\\n>       assert target.page_items([7, 8], 1, 1) == [8]\\nE       assert [] == [8]\\nE         \\nE         Right contains one more item: 8\\nE         Use -v to get more diff\\n\\n/opt/webguard/regressions/test_pagination.py:21: AssertionError\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"}],\"collection_errors\":[]}\n",
+        "stderr": "",
+        "output_truncated": false,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "container_id": "ef716eb7863db86f247793ecb920804cf6efa3bfddfb3088d74d938dee84445a",
+        "effective_settings": {
+          "network": "none",
+          "user": "10001:10001",
+          "read_only_root": true,
+          "cap_drop": [
+            "ALL"
+          ],
+          "no_new_privileges": true,
+          "host_bind_mounts": false,
+          "source_read_only": true,
+          "memory_bytes": 134217728,
+          "memory_swap_bytes": 134217728,
+          "nano_cpus": 1000000000,
+          "pids": 64,
+          "scratch_bytes": 33554432,
+          "tmp_bytes": 8388608,
+          "shm_bytes": 1048576,
+          "log_driver": "none"
+        },
+        "cleanup_complete": true,
+        "test_report": {
+          "schema": 1,
+          "complete": true,
+          "exit_code": 1,
+          "tests": [
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "call",
+              "outcome": "failed",
+              "assertion": true,
+              "message": "assert [1] == [1, 2]\n  \n  Right contains one more item: 2\n  Use -v to get more diff",
+              "traceback": "def test_full_first():\n>       assert target.page_items([1, 2, 3, 4], 0, 2) == [1, 2]\nE       assert [1] == [1, 2]\nE         \nE         Right contains one more item: 2\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:13: AssertionError",
+              "signature": "f9d408509437924a9094bb2c37035e995fe5f8d197863505ba9674d25ce24fcf",
+              "comparison": {
+                "left": "[1]",
+                "operator": "==",
+                "right": "[1, 2]",
+                "expected": "[1, 2]",
+                "actual": "[1]",
+                "basis": "literal right-hand expectation in assertion source"
+              }
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "call",
+              "outcome": "failed",
+              "assertion": true,
+              "message": "assert [3] == [3, 4]\n  \n  Right contains one more item: 4\n  Use -v to get more diff",
+              "traceback": "def test_full_second():\n>       assert target.page_items([1, 2, 3, 4], 1, 2) == [3, 4]\nE       assert [3] == [3, 4]\nE         \nE         Right contains one more item: 4\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:17: AssertionError",
+              "signature": "42974aeb4392dcf478e8d4151241b3048c341117802e0763cd72fbe88e2bfb4e",
+              "comparison": {
+                "left": "[3]",
+                "operator": "==",
+                "right": "[3, 4]",
+                "expected": "[3, 4]",
+                "actual": "[3]",
+                "basis": "literal right-hand expectation in assertion source"
+              }
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "call",
+              "outcome": "failed",
+              "assertion": true,
+              "message": "assert [] == [8]\n  \n  Right contains one more item: 8\n  Use -v to get more diff",
+              "traceback": "def test_page_size_one():\n>       assert target.page_items([7, 8], 1, 1) == [8]\nE       assert [] == [8]\nE         \nE         Right contains one more item: 8\nE         Use -v to get more diff\n\n/opt/webguard/regressions/test_pagination.py:21: AssertionError",
+              "signature": "f796ec4290fe6c38e7cf233fd35e1f480046b774d53a36d40749ab52b63a6f84",
+              "comparison": {
+                "left": "[]",
+                "operator": "==",
+                "right": "[8]",
+                "expected": "[8]",
+                "actual": "[]",
+                "basis": "literal right-hand expectation in assertion source"
+              }
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            }
+          ],
+          "collection_errors": []
+        },
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "/opt/webguard/regressions/test_pagination.py"
+        ],
+        "check": "regression"
+      },
+      "original": {
+        "run_id": "1de00f1ea30e46c3a2d277e78fe9f7b2",
+        "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+        "source_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+        "source_manifest_digest": "fac92e7cd643a85198e7af03ec8bf37e3ab5006639fe139a6088ee8183311819",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "input_digest": "c229c0bae1ee54d53a93cd3f540a28c7a737e041de901305dc553cd7e628d0d7",
+        "patch_digest": "c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b",
+        "outcome": "passed",
+        "reason": "pytest_exit_0",
+        "exit_code": 0,
+        "duration_seconds": 3.547,
+        "test_duration_seconds": 0.691746,
+        "stdout": ".\n1 passed in 0.01s\n\nWEBGUARD_PYTEST_REPORT={\"schema\":1,\"complete\":true,\"exit_code\":0,\"tests\":[{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"}],\"collection_errors\":[]}\n",
+        "stderr": "",
+        "output_truncated": false,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "container_id": "b401d078085d897fe10af71277ba1bac0d4ddf18b7b85bbbb930969df2fd73f4",
+        "effective_settings": {
+          "network": "none",
+          "user": "10001:10001",
+          "read_only_root": true,
+          "cap_drop": [
+            "ALL"
+          ],
+          "no_new_privileges": true,
+          "host_bind_mounts": false,
+          "source_read_only": true,
+          "memory_bytes": 134217728,
+          "memory_swap_bytes": 134217728,
+          "nano_cpus": 1000000000,
+          "pids": 64,
+          "scratch_bytes": 33554432,
+          "tmp_bytes": 8388608,
+          "shm_bytes": 1048576,
+          "log_driver": "none"
+        },
+        "cleanup_complete": true,
+        "test_report": {
+          "schema": 1,
+          "complete": true,
+          "exit_code": 0,
+          "tests": [
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            }
+          ],
+          "collection_errors": []
+        },
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "tests/test_pagination.py::test_first_page_contains_requested_count"
+        ],
+        "check": "original"
+      },
+      "suite": {
+        "run_id": "88b3bc8094d944a09af6b2eaf5ca14f5",
+        "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+        "source_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+        "source_manifest_digest": "fac92e7cd643a85198e7af03ec8bf37e3ab5006639fe139a6088ee8183311819",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "input_digest": "ee6b1d997364c219e42a7edf0d6d2966ccea93d5593969bc3f32d49d2a7dafa6",
+        "patch_digest": "c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b",
+        "outcome": "passed",
+        "reason": "pytest_exit_0",
+        "exit_code": 0,
+        "duration_seconds": 3.235,
+        "test_duration_seconds": 0.513209,
+        "stdout": "..\n2 passed in 0.01s\n\nWEBGUARD_PYTEST_REPORT={\"schema\":1,\"complete\":true,\"exit_code\":0,\"tests\":[{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_first_page_contains_requested_count\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"tests/test_pagination.py::test_invalid_page_rejected\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"}],\"collection_errors\":[]}\n",
+        "stderr": "",
+        "output_truncated": false,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "container_id": "6adec610968d494f61fef43d1a890ffb0b46d804fc110aa68625905931b0f416",
+        "effective_settings": {
+          "network": "none",
+          "user": "10001:10001",
+          "read_only_root": true,
+          "cap_drop": [
+            "ALL"
+          ],
+          "no_new_privileges": true,
+          "host_bind_mounts": false,
+          "source_read_only": true,
+          "memory_bytes": 134217728,
+          "memory_swap_bytes": 134217728,
+          "nano_cpus": 1000000000,
+          "pids": 64,
+          "scratch_bytes": 33554432,
+          "tmp_bytes": 8388608,
+          "shm_bytes": 1048576,
+          "log_driver": "none"
+        },
+        "cleanup_complete": true,
+        "test_report": {
+          "schema": 1,
+          "complete": true,
+          "exit_code": 0,
+          "tests": [
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            }
+          ],
+          "collection_errors": []
+        },
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "tests"
+        ],
+        "check": "suite"
+      },
+      "patched_regression": {
+        "run_id": "8fd792775a994ed9be06355d1b66cd6d",
+        "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+        "source_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+        "source_manifest_digest": "fac92e7cd643a85198e7af03ec8bf37e3ab5006639fe139a6088ee8183311819",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "input_digest": "782c58986fbebb8a7f68a33baf004a3972e077aff16beebeaf86824c0a516d3d",
+        "patch_digest": "c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b",
+        "outcome": "passed",
+        "reason": "pytest_exit_0",
+        "exit_code": 0,
+        "duration_seconds": 3.391,
+        "test_duration_seconds": 0.648465,
+        "stdout": ".........\n9 passed in 0.02s\n\nWEBGUARD_PYTEST_REPORT={\"schema\":1,\"complete\":true,\"exit_code\":0,\"tests\":[{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_first\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_full_second\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_page_size_one\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_partial\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_beyond_end\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_empty\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_page\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_zero_size\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"setup\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"call\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"},{\"node_id\":\"_webguard_regression/test_pagination.py::test_negative_size\",\"phase\":\"teardown\",\"outcome\":\"passed\",\"assertion\":false,\"message\":\"\",\"traceback\":\"\"}],\"collection_errors\":[]}\n",
+        "stderr": "",
+        "output_truncated": false,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "container_id": "5bedf32ef82df77cbe843874b4b4d7003474893e906ddc0aed0a37164d73c35b",
+        "effective_settings": {
+          "network": "none",
+          "user": "10001:10001",
+          "read_only_root": true,
+          "cap_drop": [
+            "ALL"
+          ],
+          "no_new_privileges": true,
+          "host_bind_mounts": false,
+          "source_read_only": true,
+          "memory_bytes": 134217728,
+          "memory_swap_bytes": 134217728,
+          "nano_cpus": 1000000000,
+          "pids": 64,
+          "scratch_bytes": 33554432,
+          "tmp_bytes": 8388608,
+          "shm_bytes": 1048576,
+          "log_driver": "none"
+        },
+        "cleanup_complete": true,
+        "test_report": {
+          "schema": 1,
+          "complete": true,
+          "exit_code": 0,
+          "tests": [
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_first",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_full_second",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_page_size_one",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_partial",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_beyond_end",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_empty",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_page",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_zero_size",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "setup",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "call",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            },
+            {
+              "node_id": "_webguard_regression/test_pagination.py::test_negative_size",
+              "phase": "teardown",
+              "outcome": "passed",
+              "assertion": false,
+              "message": "",
+              "traceback": "",
+              "signature": null,
+              "comparison": null
+            }
+          ],
+          "collection_errors": []
+        },
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "/opt/webguard/regressions/test_pagination.py"
+        ],
+        "check": "regression"
+      }
+    }
+  },
+  "publication": {
+    "outcome": "draft_pr_created",
+    "reason": null,
+    "publication": {
+      "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+      "branch": "webguard/jobs/6828dc1cc79e4f39ba45e4b4954c4280",
+      "pr_number": 1,
+      "url": "simulated://webguard/6828dc1cc79e4f39ba45e4b4954c4280/pull/1",
+      "draft": 1,
+      "sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+      "patch_digest": "c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b",
+      "created_at": 1793903485.4668398,
+      "updated_at": 1793903485.4668398,
+      "commit_sha": "102de66a4a6a4853901de5e604fa560105a5ca11",
+      "marker": "<!-- webguard-ai-job:6828dc1cc79e4f39ba45e4b4954c4280;verification:ddd54f9526ca444abdc9b73a4cac739e;patch:c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b -->",
+      "mode": "offline",
+      "simulated": true
+    },
+    "simulated": true
+  },
+  "draft": {
+    "base_ref": "main",
+    "body": "SIMULATED OFFLINE DRAFT - no GitHub PR was created.\n\n<!-- webguard-ai-job:6828dc1cc79e4f39ba45e4b4954c4280;verification:ddd54f9526ca444abdc9b73a4cac739e;patch:c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b -->\n\nBug: reproduced assertion in tests/test\\_pagination.py::test\\_first\\_page\\_contains\\_requested\\_count.\n\nassert \\[10\\] == \\[10, 20\\]\n  \n  Right contains one more item: 20\n  Use -v to get more diff\n\nProposed and verified source fix: The exclusive slice endpoint removes one requested item.\n\nBaseline commit: 7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb\n\nPatch SHA256: c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b\n\nVerification evidence SHA256: 0afccd705f5fa5acd2eb9e334a489d6cbc8fb0c5f479411ac200362151214a64\n\nChecks actually run (unpatched regression failures are the required control):\n- baseline\\_regression: exit 1; 6 passed, 3 failed. Command: \\[\"python\", \"-I\", \"-B\", \"-m\", \"pytest\", \"-q\", \"--capture=no\", \"-c\", \"/opt/webguard/pytest.ini\", \"-p\", \"no:cacheprovider\", \"-p\", \"webguard\\_report\", \"--\", \"/opt/webguard/regressions/test\\_pagination.py\"\\]\n- original: exit 0; 1 passed, 0 failed. Command: \\[\"python\", \"-I\", \"-B\", \"-m\", \"pytest\", \"-q\", \"--capture=no\", \"-c\", \"/opt/webguard/pytest.ini\", \"-p\", \"no:cacheprovider\", \"-p\", \"webguard\\_report\", \"--\", \"tests/test\\_pagination.py::test\\_first\\_page\\_contains\\_requested\\_count\"\\]\n- patched\\_regression: exit 0; 9 passed, 0 failed. Command: \\[\"python\", \"-I\", \"-B\", \"-m\", \"pytest\", \"-q\", \"--capture=no\", \"-c\", \"/opt/webguard/pytest.ini\", \"-p\", \"no:cacheprovider\", \"-p\", \"webguard\\_report\", \"--\", \"/opt/webguard/regressions/test\\_pagination.py\"\\]\n- suite: exit 0; 2 passed, 0 failed. Command: \\[\"python\", \"-I\", \"-B\", \"-m\", \"pytest\", \"-q\", \"--capture=no\", \"-c\", \"/opt/webguard/pytest.ini\", \"-p\", \"no:cacheprovider\", \"-p\", \"webguard\\_report\", \"tests\"\\]\n\nDraft only. The operator reviews and merges; WebGuard-AI does not merge this PR.",
+    "commit_sha": "102de66a4a6a4853901de5e604fa560105a5ca11",
+    "draft": true,
+    "simulated": true,
+    "title": "[SIMULATED] WebGuard-AI verified repair 6828dc1c"
+  },
+  "intent": {
+    "job_id": "6828dc1cc79e4f39ba45e4b4954c4280",
+    "repository": "demo-repository",
+    "base_ref": "main",
+    "base_sha": "7cd3f06ae92ebcbc1e196f9b2847ceaae0f770bb",
+    "patch_digest": "c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b",
+    "verification_id": "ddd54f9526ca444abdc9b73a4cac739e",
+    "evidence_digest": "0afccd705f5fa5acd2eb9e334a489d6cbc8fb0c5f479411ac200362151214a64",
+    "marker": "<!-- webguard-ai-job:6828dc1cc79e4f39ba45e4b4954c4280;verification:ddd54f9526ca444abdc9b73a4cac739e;patch:c30c3f2dce90eb00bb6467be48c75ca963721c08d0a3eb6df017d81ed92ea18b -->",
+    "branch": "webguard/jobs/6828dc1cc79e4f39ba45e4b4954c4280",
+    "mode": "offline",
+    "created_at": 1793903485.4108775,
+    "commit_sha": "102de66a4a6a4853901de5e604fa560105a5ca11",
+    "phase": "completed",
+    "stale": 0,
+    "last_error": null,
+    "pr_number": 1,
+    "pr_url": "simulated://webguard/6828dc1cc79e4f39ba45e4b4954c4280/pull/1"
+  },
+  "fixture_unchanged": true,
+  "counters": {
+    "repair_attempts": 1,
+    "publication_attempts": 1,
+    "model_calls": 1,
+    "execution_seconds": 90
+  }
+}

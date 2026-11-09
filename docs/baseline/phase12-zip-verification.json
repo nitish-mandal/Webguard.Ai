@@ -1,0 +1,12 @@
+{
+  "files": 122,
+  "sha256": "acda8e0cdfd7c1bf1d2f0e93204a37ebb94575bfc25f9d4e5f8e32b5d5adeffd",
+  "zip_verified": true,
+  "credentials_excluded": true,
+  "runtime_data_excluded": true,
+  "byte_reproducible": true,
+  "phase11_evidence_preserved": true,
+  "unchanged_demo_included": true,
+  "checksum_sidecar_matches": true,
+  "bytes": 469857
+}

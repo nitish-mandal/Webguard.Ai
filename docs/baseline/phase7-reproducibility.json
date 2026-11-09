@@ -1,0 +1,8 @@
+{
+    "fresh_install_exit":  0,
+    "editable_installs_exit":  0,
+    "versions_match":  true,
+    "distributions":  45,
+    "google_genai":  "2.34.0",
+    "python":  "3.12.10"
+}

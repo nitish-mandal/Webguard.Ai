@@ -1,0 +1,22 @@
+{
+    "base":  "python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30",
+    "profile_digest":  "6e12d025c65102a18d30cea121202b4bca1ad3fab6dd075fa903fe72c0dc4319",
+    "wheel_hashes":  {
+                         "colorama-0.4.6-py2.py3-none-any.whl":  "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+                         "iniconfig-2.3.1-py3-none-any.whl":  "9121e2c1fdb355232495be3194c8dfe87ccc2d5dee45947b78e68f499790d7a7",
+                         "packaging-26.3-py3-none-any.whl":  "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+                         "pluggy-1.7.0-py3-none-any.whl":  "7dd7b0d8832ba3cb632c306926ded123429211b83641b35dc5c41ad2d34f9bec",
+                         "pygments-2.21.0-py3-none-any.whl":  "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+                         "pytest-9.2.0-py3-none-any.whl":  "07acdcf88ec174f907dc01af70bf52d49b014bbab03faeeade31c96b18c2e588"
+                     },
+    "asset_hashes":  {
+                         "Dockerfile":  "63fede45826d9a829040e9f0afd5a4a3c9a57b572930ca4b8ad866c5d3ac616a",
+                         "entrypoint.py":  "84cae5ec54edfec8a0d980aad8fc8de9ddc5fd785404be43b5903ee134fdfcb9",
+                         "stage.py":  "35cfcc480aefa2a7c1f4881646b43200fc5471d643d23516016fd43819dda20a",
+                         "webguard_report.py":  "2b63deead6609895c371a160a5ac79b9ca3ae87467b6a4d06b57a6e91a567ceb",
+                         "pytest.ini":  "e3e9e02cbcf0b8d5307f64c607547b503facf6d2a773f8bc3c6063c474fef76f",
+                         "profile.json":  "6c4492a1e324b0e6fe2af0a68c550528b3abc2bfb106b8ad39bfa2b2001645ae",
+                         "requirements.lock":  "d51e59d16d4ec8a3d5a42b174bd581976ec653a0daca662e523c784a5caa7e95"
+                     },
+    "image_id":  "sha256:b6fe81369bc8681f9f6dcc29e3f282d466c1d1599b64d65beaf4d27e93eccfdc"
+}

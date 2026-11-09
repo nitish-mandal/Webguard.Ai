@@ -1,0 +1,1 @@
+"""WebGuard-AI scaffold package."""

@@ -1,0 +1,22 @@
+{
+  "browser_acceptance": "pending_user_confirmation",
+  "browser_job_submitted_by_agent": false,
+  "token_value_printed": false,
+  "api_ready": true,
+  "database_ready": true,
+  "worker_ready": true,
+  "operator_auth_ready": true,
+  "protected_jobs_http": 200,
+  "unauthenticated_jobs_http": 401,
+  "frontend_http": 200,
+  "offline_demo": true,
+  "preserved_runner_preflight": "passed",
+  "worker_id": "d0436cfc6faf4fcfb705c1cd3d11bf3a",
+  "startup_token_location": ".env AUTH_TOKEN (private value not recorded)",
+  "existing_jobs_observed": 0,
+  "prepared_at": "2026-11-05T18:15:58.665815+00:00",
+  "worker_docker_settings_unchanged": true,
+  "prepared_image_unchanged": true,
+  "frontend_process_unchanged": true,
+  "credential_absent_from_service_logs_and_receipts": true
+}

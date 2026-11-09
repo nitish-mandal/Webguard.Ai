@@ -1,0 +1,9 @@
+{
+  "offline_docker_acceptance": "passed",
+  "tests": 24,
+  "skipped": 0,
+  "failures": 0,
+  "gemini": "offline_fake",
+  "github": "simulated",
+  "live_tested": false
+}

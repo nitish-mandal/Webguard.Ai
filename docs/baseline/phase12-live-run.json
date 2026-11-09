@@ -1,0 +1,517 @@
+{
+  "repository": "nitish-mandal/webguard-live-demo",
+  "base_ref": "main",
+  "expected_base_sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+  "job_id": "53729077308847e9879b263b7d752d15",
+  "submission_count": 1,
+  "browser_submission": false,
+  "submission_transport": "authenticated_loopback_api",
+  "started_at": 1793948212.2465334,
+  "preflight": {
+    "base_unchanged": true,
+    "token_valid_and_single_repository": "[REDACTED]",
+    "docker_policy_passed": true,
+    "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "source_matches_demo": true
+  },
+  "live_api_status": {
+    "api_version": "v1",
+    "mode": "live_configured",
+    "repair_enabled": false,
+    "processing_enabled": false,
+    "worker_available": false,
+    "approved_repository": "nitish-mandal/webguard-live-demo",
+    "job_api_enabled": true,
+    "database_ready": true,
+    "operator_auth_configured": true,
+    "live_gemini_configured": true,
+    "live_github_configured": true,
+    "message": "HTTP stores jobs; a separately started worker processes them. Availability uses worker heartbeats, not Docker readiness."
+  },
+  "accepted_job": {
+    "id": "53729077308847e9879b263b7d752d15",
+    "state": "queued",
+    "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+    "ref": "main",
+    "failure_reason": null,
+    "repair_attempts": 0,
+    "publication_attempts": 0,
+    "model_calls": 0,
+    "model_tokens": 0,
+    "execution_seconds": 0,
+    "deadline": 1793948518.7205596,
+    "cancellation_requested": false
+  },
+  "last_job": {
+    "id": "53729077308847e9879b263b7d752d15",
+    "state": "failed",
+    "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+    "ref": "main",
+    "failure_reason": "model",
+    "repair_attempts": 1,
+    "publication_attempts": 0,
+    "model_calls": 1,
+    "model_tokens": 5461,
+    "execution_seconds": 60,
+    "deadline": 1793948518.7205596,
+    "cancellation_requested": 0
+  },
+  "worker_exit_code": 0,
+  "worker_output": "{\"job_id\": \"53729077308847e9879b263b7d752d15\", \"outcome\": \"failed\", \"reason\": \"model\"}\r\n",
+  "worker_stderr": "",
+  "events": [
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 1,
+      "created_at": 1793948218.7205596,
+      "kind": "created",
+      "data": {
+        "state": "queued"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 2,
+      "created_at": 1793948219.359875,
+      "kind": "lease_claimed",
+      "data": {
+        "fence": 1,
+        "owner": "27903bed93974340bf1ced58b744d162",
+        "reclaimed": false
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 3,
+      "created_at": 1793948224.6551886,
+      "kind": "worker_cleanup",
+      "data": {
+        "attempts_removed": true
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 4,
+      "created_at": 1793948224.8949037,
+      "kind": "state_changed",
+      "data": {
+        "from": "queued",
+        "to": "baselining"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 5,
+      "created_at": 1793948225.1473134,
+      "kind": "worker_stage",
+      "data": {
+        "stage": "source"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 6,
+      "created_at": 1793948226.1089783,
+      "kind": "revision_pinned",
+      "data": {
+        "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 7,
+      "created_at": 1793948227.5096636,
+      "kind": "source_acquired",
+      "data": {
+        "manifest_digest": "b5e372c895edce91bf82a2749d7a54bb011ef4a65347d4b58fc45b4de5110d6d",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+        "workspace_id": "655a60efc4cb4ba9b11f5f4fcab44d20"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 8,
+      "created_at": 1793948227.5129452,
+      "kind": "worker_stage",
+      "data": {
+        "stage": "reproduction"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 9,
+      "created_at": 1793948227.7698572,
+      "kind": "usage_reserved",
+      "data": {
+        "cost_micros": 0,
+        "execution_seconds": 30,
+        "model_calls": 0,
+        "model_tokens": 0
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 10,
+      "created_at": 1793948231.0845997,
+      "kind": "evidence_added",
+      "data": {
+        "evidence_id": "a0be230a42034aff93fe17f0516ed647",
+        "exit_code": 1,
+        "kind": "baseline"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 11,
+      "created_at": 1793948231.3088336,
+      "kind": "usage_reserved",
+      "data": {
+        "cost_micros": 0,
+        "execution_seconds": 30,
+        "model_calls": 0,
+        "model_tokens": 0
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 12,
+      "created_at": 1793948233.792026,
+      "kind": "evidence_added",
+      "data": {
+        "evidence_id": "1eaf3caf62c64e34aac3378252c131d9",
+        "exit_code": 1,
+        "kind": "baseline"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 13,
+      "created_at": 1793948233.8108609,
+      "kind": "detection_recorded",
+      "data": {
+        "evidence_id": "f62ac14d3101476e9df8239dbe552eaa",
+        "verdict": "reproduced"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 14,
+      "created_at": 1793948233.816868,
+      "kind": "state_changed",
+      "data": {
+        "from": "baselining",
+        "to": "reproduced"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 15,
+      "created_at": 1793948233.8262577,
+      "kind": "worker_stage",
+      "data": {
+        "stage": "repair"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 16,
+      "created_at": 1793948233.84678,
+      "kind": "state_changed",
+      "data": {
+        "from": "reproduced",
+        "to": "repairing"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 17,
+      "created_at": 1793948233.852138,
+      "kind": "usage_reserved",
+      "data": {
+        "cost_micros": 100000,
+        "execution_seconds": 0,
+        "model_calls": 1,
+        "model_tokens": 5461
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 18,
+      "created_at": 1793948263.8664086,
+      "kind": "repair_rejected",
+      "data": {
+        "reason": "provider_timeout"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 19,
+      "created_at": 1793948263.8710332,
+      "kind": "state_changed",
+      "data": {
+        "from": "repairing",
+        "reason": "model",
+        "to": "failed"
+      }
+    },
+    {
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "sequence": 20,
+      "created_at": 1793948263.9083989,
+      "kind": "worker_cleanup",
+      "data": {
+        "attempts_removed": true
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "cursor": 1,
+      "id": "a0be230a42034aff93fe17f0516ed647",
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "created_at": 1793948231.0845997,
+      "kind": "baseline",
+      "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+      "patch_digest": null,
+      "artifact_digest": "be20b1b237886860318b5411e105b8e528531a3fd5ff24be2cf68a0bb87f78e3",
+      "exit_code": 1,
+      "summary": {
+        "assertions": [
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a"
+          }
+        ],
+        "attempt_id": "01-4d2117e45f7e452aa96326dccac50f45",
+        "classification": "assertion_failure",
+        "cleanup_complete": true,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "input_digest": "1efdc60eec17960ef6ec43316d392c280ea69a773c8ecb123ea5eeeffaced57b",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "report_valid": true,
+        "run_id": "cd49cd5edb55456a97f2dba2aad5f676",
+        "test_nodes": [
+          "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "tests/test_pagination.py::test_invalid_page_rejected"
+        ]
+      },
+      "repair_attempt": 0
+    },
+    {
+      "cursor": 2,
+      "id": "1eaf3caf62c64e34aac3378252c131d9",
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "created_at": 1793948233.792026,
+      "kind": "baseline",
+      "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+      "patch_digest": null,
+      "artifact_digest": "43f0f4d49e41488fddb208391d0d19dfffd69217632285548590d2145b5a8977",
+      "exit_code": 1,
+      "summary": {
+        "assertions": [
+          {
+            "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+            "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a"
+          }
+        ],
+        "attempt_id": "02-405738e1896942038b232b260c231aef",
+        "classification": "assertion_failure",
+        "cleanup_complete": true,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "input_digest": "1efdc60eec17960ef6ec43316d392c280ea69a773c8ecb123ea5eeeffaced57b",
+        "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+        "report_valid": true,
+        "run_id": "e801950ba651472e8cfbba09ef861128",
+        "test_nodes": [
+          "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "tests/test_pagination.py::test_invalid_page_rejected"
+        ]
+      },
+      "repair_attempt": 0
+    },
+    {
+      "cursor": 3,
+      "id": "f62ac14d3101476e9df8239dbe552eaa",
+      "job_id": "53729077308847e9879b263b7d752d15",
+      "created_at": 1793948233.8108609,
+      "kind": "detection",
+      "sha": "b5621b9be3e6b1eabdcb1798ba877016d33a6ce6",
+      "patch_digest": null,
+      "artifact_digest": "c7e8d3b99183ce82b828bc148a00f3a8198824a0f49b7174877cd47ca78fac43",
+      "exit_code": 1,
+      "summary": {
+        "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+        "runs": [
+          "a0be230a42034aff93fe17f0516ed647",
+          "1eaf3caf62c64e34aac3378252c131d9"
+        ],
+        "signature": "90fb25a0cd2a65631746f95f3325bf179bcee758237e13e6d3ee76ab4b73867a",
+        "untrusted_repository_data": true,
+        "verdict": "reproduced"
+      },
+      "repair_attempt": 0
+    }
+  ],
+  "candidates": [],
+  "verification_rounds": [],
+  "publication": null,
+  "publication_intent": null,
+  "report": {
+    "version": 17,
+    "stage": "repair",
+    "paused": false,
+    "reason": null,
+    "next_run_at": null,
+    "cleanup_completed": true,
+    "detection": {
+      "verdict": "reproduced",
+      "evidence_available": true,
+      "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+      "expected": "[10, 20]",
+      "actual": "[10]",
+      "message": "assert [10] == [10, 20]\n  \n  Right contains one more item: 20\n  Use -v to get more diff",
+      "traceback": "def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError",
+      "observations": [
+        {
+          "exit_code": 1,
+          "duration_seconds": 3.296,
+          "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+        },
+        {
+          "exit_code": 1,
+          "duration_seconds": 2.469,
+          "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+        }
+      ]
+    },
+    "verifications": [],
+    "publication": null
+  },
+  "run_finished": true,
+  "both_live_flags_restored_false": true,
+  "offline_api_status": {
+    "api_version": "v1",
+    "mode": "offline",
+    "repair_enabled": false,
+    "processing_enabled": false,
+    "worker_available": false,
+    "approved_repository": "nitish-mandal/webguard-live-demo",
+    "job_api_enabled": true,
+    "database_ready": true,
+    "operator_auth_configured": true,
+    "live_gemini_configured": false,
+    "live_github_configured": false,
+    "message": "HTTP stores jobs; a separately started worker processes them. Availability uses worker heartbeats, not Docker readiness."
+  },
+  "offline_worker_ready": true,
+  "service_process_ids": {
+    "api": 12772,
+    "worker": 31848
+  },
+  "restored_api_status": {
+    "api_version": "v1",
+    "mode": "offline",
+    "repair_enabled": true,
+    "processing_enabled": true,
+    "worker_available": true,
+    "approved_repository": "nitish-mandal/webguard-live-demo",
+    "job_api_enabled": true,
+    "database_ready": true,
+    "operator_auth_configured": true,
+    "live_gemini_configured": false,
+    "live_github_configured": false,
+    "message": "HTTP stores jobs; a separately started worker processes them. Availability uses worker heartbeats, not Docker readiness."
+  },
+  "finished_at": 1793948266.6363523,
+  "actual_baseline_runs": [
+    {
+      "run_id": "cd49cd5edb55456a97f2dba2aad5f676",
+      "container_id": "551face73715ba24bedbee781313723cbf78c915e4ea688b51959d46985dd4bf",
+      "command": [
+        "python",
+        "-I",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--capture=no",
+        "-c",
+        "/opt/webguard/pytest.ini",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "webguard_report",
+        "tests"
+      ],
+      "exit_code": 1,
+      "duration_seconds": 3.296,
+      "test_counts": {
+        "failed": 1,
+        "passed": 1
+      },
+      "test_outcomes": [
+        {
+          "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "phase": "call",
+          "outcome": "failed"
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+          "phase": "call",
+          "outcome": "passed"
+        }
+      ],
+      "cleanup_complete": true,
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+    },
+    {
+      "run_id": "e801950ba651472e8cfbba09ef861128",
+      "container_id": "7328b8422c71e63f6ed3778a238542b7fa24e1ca23ff856a0e35467ad4bb8f23",
+      "command": [
+        "python",
+        "-I",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--capture=no",
+        "-c",
+        "/opt/webguard/pytest.ini",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "webguard_report",
+        "tests"
+      ],
+      "exit_code": 1,
+      "duration_seconds": 2.469,
+      "test_counts": {
+        "failed": 1,
+        "passed": 1
+      },
+      "test_outcomes": [
+        {
+          "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+          "phase": "call",
+          "outcome": "failed"
+        },
+        {
+          "node_id": "tests/test_pagination.py::test_invalid_page_rejected",
+          "phase": "call",
+          "outcome": "passed"
+        }
+      ],
+      "cleanup_complete": true,
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+    }
+  ],
+  "cleanup_check": {
+    "managed_container_count": 0,
+    "managed_volume_count": 0
+  },
+  "bundled_demo_unchanged": true,
+  "failure_stage": "repair",
+  "failure_error": "provider_timeout",
+  "model_call_limit_seconds": 30
+}

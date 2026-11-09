@@ -1,0 +1,12 @@
+{
+    "image_id":  "sha256:b6fe81369bc8681f9f6dcc29e3f282d466c1d1599b64d65beaf4d27e93eccfdc",
+    "profile_digest":  "6e12d025c65102a18d30cea121202b4bca1ad3fab6dd075fa903fe72c0dc4319",
+    "os":  "linux",
+    "architecture":  "amd64",
+    "user":  "10001:10001",
+    "entrypoint":  [
+                       "python",
+                       "-I",
+                       "/opt/webguard/entrypoint.py"
+                   ]
+}

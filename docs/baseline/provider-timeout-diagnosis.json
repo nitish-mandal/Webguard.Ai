@@ -1,0 +1,40 @@
+{
+  "job_id": "53729077308847e9879b263b7d752d15",
+  "evidence_basis": "existing stored events and code only",
+  "configured_model": "gemini-3.8-flash",
+  "sdk_version": "2.34.0",
+  "old_controller_seconds": 30,
+  "old_sdk_timeout_milliseconds": 30000,
+  "observed_reservation_to_rejection_seconds": 30.014,
+  "remaining_job_deadline_at_reservation_seconds": 284.868,
+  "provider_receipt_established": false,
+  "additional_live_requests": 0,
+  "additional_jobs": 0,
+  "existing_job_preserved": true,
+  "both_live_flags_false": true,
+  "proposed_settings": {
+    "REPAIR_CALL_SECONDS": 90,
+    "REPAIR_HTTP_TIMEOUT_SECONDS": 60,
+    "JOB_TIMEOUT_SECONDS": 420
+  },
+  "proposal_applied_to_private_env": false,
+  "proposal_validated_offline": true,
+  "tests": {
+    "focused_deadlines": {
+      "passed": 12,
+      "seconds": 2.83
+    },
+    "initial_existing_repair_settings": {
+      "passed": 70,
+      "seconds": 27.72
+    },
+    "product": {
+      "passed": 625,
+      "isolation_deselected": 24,
+      "warnings": 1,
+      "seconds": 152.32
+    },
+    "ruff": "passed"
+  },
+  "live_fix_verification": "not attempted; requires additional approval"
+}

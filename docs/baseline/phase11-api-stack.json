@@ -1,0 +1,680 @@
+{
+  "api_stack_acceptance": "passed",
+  "browser": "not_run",
+  "gemini": "offline_fake",
+  "github": "simulated",
+  "frontend_http": 200,
+  "api_http": 202,
+  "cors_preflight": 200,
+  "report_http": 200,
+  "unauthenticated_report_http": 401,
+  "job": {
+    "id": "ac4f8c73ad394ed0bed6537c7bbc76f9",
+    "repository": "demo-repository",
+    "ref": "main",
+    "sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+    "state": "draft_pr_created",
+    "created_at": 1793900125.7587,
+    "updated_at": 1793900156.0855477,
+    "deadline": 1793900305.7587,
+    "failure_reason": null,
+    "cancellation_requested": false,
+    "cancelled_at": null,
+    "repair_attempts": 1,
+    "publication_attempts": 1,
+    "model_calls": 1,
+    "model_tokens": 5461,
+    "cost_micros": 0,
+    "execution_seconds": 90,
+    "version": 43,
+    "limits": {
+      "repair_attempts": 3,
+      "publication_attempts": 3,
+      "model_calls": 3,
+      "model_tokens": 100000,
+      "cost_micros": 1000000,
+      "execution_seconds": 120,
+      "output_bytes": 65536,
+      "patch_files": 5,
+      "patch_lines": 200
+    }
+  },
+  "report": {
+    "version": 43,
+    "stage": "publication",
+    "paused": false,
+    "reason": null,
+    "next_run_at": null,
+    "cleanup_completed": false,
+    "detection": {
+      "verdict": "reproduced",
+      "evidence_available": true,
+      "node_id": "tests/test_pagination.py::test_first_page_contains_requested_count",
+      "expected": "[10, 20]",
+      "actual": "[10]",
+      "message": "assert [10] == [10, 20]\n  \n  Right contains one more item: 20\n  Use -v to get more diff",
+      "traceback": "def test_first_page_contains_requested_count():\n>       assert module.page_items([10, 20, 30, 40], 0, 2) == [10, 20]\nE       assert [10] == [10, 20]\nE         \nE         Right contains one more item: 20\nE         Use -v to get more diff\n\ntests/test_pagination.py:13: AssertionError",
+      "observations": [
+        {
+          "exit_code": 1,
+          "duration_seconds": 4.86,
+          "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+        },
+        {
+          "exit_code": 1,
+          "duration_seconds": 3.797,
+          "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3"
+        }
+      ]
+    },
+    "verifications": [
+      {
+        "round": 1,
+        "status": "verified",
+        "reason": null,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "patch_digest": "518e82eb4b19cce91d43f87c3618575de2f7cfc303b3879e6778f61a95460171",
+        "evidence_available": true,
+        "checks": [
+          {
+            "name": "baseline_regression",
+            "exit_code": 1,
+            "passed": 6,
+            "failed": 3,
+            "command": [
+              "python",
+              "-I",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--capture=no",
+              "-c",
+              "/opt/webguard/pytest.ini",
+              "-p",
+              "no:cacheprovider",
+              "-p",
+              "webguard_report",
+              "--",
+              "/opt/webguard/regressions/test_pagination.py"
+            ]
+          },
+          {
+            "name": "original",
+            "exit_code": 0,
+            "passed": 1,
+            "failed": 0,
+            "command": [
+              "python",
+              "-I",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--capture=no",
+              "-c",
+              "/opt/webguard/pytest.ini",
+              "-p",
+              "no:cacheprovider",
+              "-p",
+              "webguard_report",
+              "--",
+              "tests/test_pagination.py::test_first_page_contains_requested_count"
+            ]
+          },
+          {
+            "name": "suite",
+            "exit_code": 0,
+            "passed": 2,
+            "failed": 0,
+            "command": [
+              "python",
+              "-I",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--capture=no",
+              "-c",
+              "/opt/webguard/pytest.ini",
+              "-p",
+              "no:cacheprovider",
+              "-p",
+              "webguard_report",
+              "tests"
+            ]
+          },
+          {
+            "name": "patched_regression",
+            "exit_code": 0,
+            "passed": 9,
+            "failed": 0,
+            "command": [
+              "python",
+              "-I",
+              "-B",
+              "-m",
+              "pytest",
+              "-q",
+              "--capture=no",
+              "-c",
+              "/opt/webguard/pytest.ini",
+              "-p",
+              "no:cacheprovider",
+              "-p",
+              "webguard_report",
+              "--",
+              "/opt/webguard/regressions/test_pagination.py"
+            ]
+          }
+        ]
+      }
+    ],
+    "publication": {
+      "simulated": true,
+      "confirmed": true,
+      "draft": true,
+      "branch": "webguard/jobs/ac4f8c73ad394ed0bed6537c7bbc76f9",
+      "commit_sha": "e10bbe94c8c87b248b64fc1797e237f6fe372303",
+      "pr_number": 1,
+      "live_url": null,
+      "reason": null
+    }
+  },
+  "events": {
+    "items": [
+      {
+        "sequence": 1,
+        "created_at": 1793900125.7587,
+        "kind": "created",
+        "data": {
+          "state": "queued"
+        }
+      },
+      {
+        "sequence": 2,
+        "created_at": 1793900126.1892161,
+        "kind": "lease_claimed",
+        "data": {
+          "reclaimed": false
+        }
+      },
+      {
+        "sequence": 3,
+        "created_at": 1793900126.5394514,
+        "kind": "worker_cleanup",
+        "data": {
+          "attempts_removed": true
+        }
+      },
+      {
+        "sequence": 4,
+        "created_at": 1793900127.7299106,
+        "kind": "state_changed",
+        "data": {
+          "from": "queued",
+          "to": "baselining"
+        }
+      },
+      {
+        "sequence": 5,
+        "created_at": 1793900128.121228,
+        "kind": "worker_stage",
+        "data": {
+          "stage": "source"
+        }
+      },
+      {
+        "sequence": 6,
+        "created_at": 1793900128.2098277,
+        "kind": "revision_pinned",
+        "data": {
+          "sha": "2de13361c14264f24c29cb2f778192c9f65858d0"
+        }
+      },
+      {
+        "sequence": 7,
+        "created_at": 1793900128.5010934,
+        "kind": "source_acquired",
+        "data": {
+          "manifest_digest": "bc9d67225f7eec98fb549ca38cb951570873d404b84f7cc4d76c214b85c0ffd9",
+          "profile_digest": "736ae723cec1f7e50af418808dc35a41776a3aa5e12e4d2fce6df79638d63557",
+          "sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+          "workspace_id": "50d6387a35d549b68b280d74ef6ad059"
+        }
+      },
+      {
+        "sequence": 8,
+        "created_at": 1793900128.5073624,
+        "kind": "worker_stage",
+        "data": {
+          "stage": "reproduction"
+        }
+      },
+      {
+        "sequence": 9,
+        "created_at": 1793900128.8631012,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 10,
+        "created_at": 1793900133.7399163,
+        "kind": "evidence_added",
+        "data": {
+          "evidence_id": "962e0b8124684a0ca473d6154414a3e0",
+          "exit_code": 1,
+          "kind": "baseline"
+        }
+      },
+      {
+        "sequence": 11,
+        "created_at": 1793900134.045467,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 12,
+        "created_at": 1793900137.8441691,
+        "kind": "evidence_added",
+        "data": {
+          "evidence_id": "ce21b48371ac4d32809832a4fac02e87",
+          "exit_code": 1,
+          "kind": "baseline"
+        }
+      },
+      {
+        "sequence": 13,
+        "created_at": 1793900137.8803492,
+        "kind": "detection_recorded",
+        "data": {}
+      },
+      {
+        "sequence": 14,
+        "created_at": 1793900137.8858387,
+        "kind": "state_changed",
+        "data": {
+          "from": "baselining",
+          "to": "reproduced"
+        }
+      },
+      {
+        "sequence": 15,
+        "created_at": 1793900137.8928802,
+        "kind": "worker_stage",
+        "data": {
+          "stage": "repair"
+        }
+      },
+      {
+        "sequence": 16,
+        "created_at": 1793900137.9221246,
+        "kind": "state_changed",
+        "data": {
+          "from": "reproduced",
+          "to": "repairing"
+        }
+      },
+      {
+        "sequence": 17,
+        "created_at": 1793900137.934612,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 0,
+          "model_calls": 1,
+          "model_tokens": 5461
+        }
+      },
+      {
+        "sequence": 18,
+        "created_at": 1793900138.4602184,
+        "kind": "candidate_proposed",
+        "data": {}
+      },
+      {
+        "sequence": 19,
+        "created_at": 1793900138.4697535,
+        "kind": "worker_stage",
+        "data": {
+          "stage": "verification"
+        }
+      },
+      {
+        "sequence": 20,
+        "created_at": 1793900138.8206878,
+        "kind": "state_changed",
+        "data": {
+          "from": "repairing",
+          "to": "verifying"
+        }
+      },
+      {
+        "sequence": 21,
+        "created_at": 1793900138.8256364,
+        "kind": "verification_started",
+        "data": {}
+      },
+      {
+        "sequence": 22,
+        "created_at": 1793900139.2211332,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 23,
+        "created_at": 1793900143.5446255,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 24,
+        "created_at": 1793900147.389006,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 25,
+        "created_at": 1793900152.1575363,
+        "kind": "usage_reserved",
+        "data": {
+          "cost_micros": 0,
+          "execution_seconds": 15,
+          "model_calls": 0,
+          "model_tokens": 0
+        }
+      },
+      {
+        "sequence": 26,
+        "created_at": 1793900155.8117347,
+        "kind": "state_changed",
+        "data": {
+          "from": "verifying",
+          "to": "verified"
+        }
+      },
+      {
+        "sequence": 27,
+        "created_at": 1793900155.8117347,
+        "kind": "verification_completed",
+        "data": {}
+      },
+      {
+        "sequence": 28,
+        "created_at": 1793900155.8228507,
+        "kind": "worker_stage",
+        "data": {
+          "stage": "publication"
+        }
+      },
+      {
+        "sequence": 29,
+        "created_at": 1793900156.0089395,
+        "kind": "publication_prepared",
+        "data": {
+          "branch": "webguard/jobs/ac4f8c73ad394ed0bed6537c7bbc76f9",
+          "simulated": true,
+          "verification_id": "67bbd09488c146d1a2257b40f5caccc7"
+        }
+      },
+      {
+        "sequence": 30,
+        "created_at": 1793900156.026907,
+        "kind": "state_changed",
+        "data": {
+          "from": "verified",
+          "to": "publishing"
+        }
+      },
+      {
+        "sequence": 31,
+        "created_at": 1793900156.0779798,
+        "kind": "draft_observed",
+        "data": {
+          "pr_number": 1,
+          "simulated": true,
+          "url": "simulated://webguard/ac4f8c73ad394ed0bed6537c7bbc76f9/pull/1"
+        }
+      },
+      {
+        "sequence": 32,
+        "created_at": 1793900156.0855477,
+        "kind": "state_changed",
+        "data": {
+          "from": "publishing",
+          "reason": null,
+          "to": "draft_pr_created"
+        }
+      },
+      {
+        "sequence": 33,
+        "created_at": 1793900156.0855477,
+        "kind": "draft_pr_recorded",
+        "data": {
+          "commit_sha": "e10bbe94c8c87b248b64fc1797e237f6fe372303",
+          "draft": true,
+          "pr_number": 1,
+          "simulated": true
+        }
+      },
+      {
+        "sequence": 34,
+        "created_at": 1793900156.2401967,
+        "kind": "worker_cleanup",
+        "data": {
+          "attempts_removed": true
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "simulated_drafts": 1,
+  "fixture_unchanged": true,
+  "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+  "claims": 1,
+  "live_gemini_tested": false,
+  "live_github_tested": false,
+  "docker_runs": [
+    {
+      "run_id": "6578976d77df4250b1866d87af7c6e64",
+      "container_id": "48bb78ab40ae558609778685ac8da29dbadf1cb47c719a28e4a6cbcb982483d7",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "test_failure",
+      "exit_code": 1,
+      "duration_seconds": 4.86,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    },
+    {
+      "run_id": "0ec561879fdf489ba712ffa204e5e4a0",
+      "container_id": "2b6ba716c59357f469a0819d4481a72c8e56d5da22ac33d4adc5ebaceecef325",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "test_failure",
+      "exit_code": 1,
+      "duration_seconds": 3.797,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    },
+    {
+      "run_id": "4912f6c8dcb144ee94e93167dbc065db",
+      "container_id": "9b4d90a2752303a8d775fc41edd90f08a5b0d848e5b25d4eefb1c2cec7991a65",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "test_failure",
+      "exit_code": 1,
+      "duration_seconds": 4.015,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    },
+    {
+      "run_id": "034119d646e045e08f560b0df13d9d97",
+      "container_id": "bbab655c1a06504c620a4531779eb0fbd0a8497035ffd0eb274748ffe697c823",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "passed",
+      "exit_code": 0,
+      "duration_seconds": 3.531,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    },
+    {
+      "run_id": "f49a54a73e87451fb9842ab7b548a572",
+      "container_id": "bac9d0b33fefdb6f5d0cf6696db5d22925c3ec3db2ca3b32ff1044847ddd0699",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "passed",
+      "exit_code": 0,
+      "duration_seconds": 3.625,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    },
+    {
+      "run_id": "5a88bf6cda324a1dbeace0b2ae4c1c92",
+      "container_id": "165c12035d8ac01cdbe2ffe16fa7e5f61ec1ae485f8c055db490c1fbd92604e7",
+      "source_sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+      "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+      "outcome": "passed",
+      "exit_code": 0,
+      "duration_seconds": 4.437,
+      "cleanup_complete": true,
+      "effective_settings": {
+        "cap_drop": [
+          "ALL"
+        ],
+        "host_bind_mounts": false,
+        "log_driver": "none",
+        "memory_bytes": 134217728,
+        "memory_swap_bytes": 134217728,
+        "nano_cpus": 1000000000,
+        "network": "none",
+        "no_new_privileges": true,
+        "pids": 64,
+        "read_only_root": true,
+        "scratch_bytes": 33554432,
+        "shm_bytes": 1048576,
+        "source_read_only": true,
+        "tmp_bytes": 8388608,
+        "user": "10001:10001"
+      }
+    }
+  ],
+  "stop_request_exit": 0,
+  "worker_exit": 0
+}

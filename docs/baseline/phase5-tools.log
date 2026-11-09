@@ -1,0 +1,4 @@
+command=Get-Command docker -ErrorAction SilentlyContinue
+docker_available=False
+command=Test-Path C:\Program Files\Docker\Docker\resources\bin\docker.exe
+standard_docker_executable=False

@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+node_modules/
+dist/
+coverage/
+.coverage
+data/
+artifacts/
+workspaces/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Workspace-local bootstrap runtimes and caches
+.tools/
+# Preserve Phase 1 evidence despite the general log rule
+!docs/baseline/*.log

@@ -1,0 +1,175 @@
+{
+  "release": "phase12-offline",
+  "date": "2026-11-06",
+  "product_tests": {
+    "passed": 610,
+    "deselected_isolation": 24,
+    "warnings": 1
+  },
+  "frontend_tests": {
+    "passed": 26,
+    "mocked": true
+  },
+  "typescript": "passed",
+  "build": "passed",
+  "docker": {
+    "passed": 24,
+    "skipped": 0,
+    "failures": 0,
+    "real_execution": true
+  },
+  "automatic_offline_demo": {
+    "sha": "2de13361c14264f24c29cb2f778192c9f65858d0",
+    "failing_test": "tests/test_pagination.py::test_first_page_contains_requested_count",
+    "baseline_runs": 2,
+    "expected": "[10, 20]",
+    "actual": "[10]",
+    "patch_digest": "518e82eb4b19cce91d43f87c3618575de2f7cfc303b3879e6778f61a95460171",
+    "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+    "checks": [
+      {
+        "name": "baseline_regression",
+        "exit_code": 1,
+        "passed": 6,
+        "failed": 3,
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "/opt/webguard/regressions/test_pagination.py"
+        ]
+      },
+      {
+        "name": "original",
+        "exit_code": 0,
+        "passed": 1,
+        "failed": 0,
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "tests/test_pagination.py::test_first_page_contains_requested_count"
+        ]
+      },
+      {
+        "name": "patched_regression",
+        "exit_code": 0,
+        "passed": 9,
+        "failed": 0,
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "--",
+          "/opt/webguard/regressions/test_pagination.py"
+        ]
+      },
+      {
+        "name": "suite",
+        "exit_code": 0,
+        "passed": 2,
+        "failed": 0,
+        "command": [
+          "python",
+          "-I",
+          "-B",
+          "-m",
+          "pytest",
+          "-q",
+          "--capture=no",
+          "-c",
+          "/opt/webguard/pytest.ini",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "webguard_report",
+          "tests"
+        ]
+      }
+    ],
+    "simulated_drafts": 1,
+    "fixture_unchanged": true,
+    "containers": [
+      {
+        "id": "af72a80a9124ba32310bb1d99f151391f542ab0bcc8129c04740d7aa52891f98",
+        "exit_code": 1,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      },
+      {
+        "id": "0c88b5158d9f32ae79d8110c313019b7daa619c5779e10745e44d2d99c71a19c",
+        "exit_code": 1,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      },
+      {
+        "id": "a02a3a3aa46e1e544b8299f486fcab7f17b6bef108f645da5168b855e1e62f1f",
+        "exit_code": 1,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      },
+      {
+        "id": "7aa7fea2021594b175327fe04e6815bc41d2d6860bd71f3f41a48fbb011d9ed8",
+        "exit_code": 0,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      },
+      {
+        "id": "1e91332c5c3cddd511e4d66c50ff12c1eccf7a57c8ec2d50b914ff56a592607e",
+        "exit_code": 0,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      },
+      {
+        "id": "2f610b174db2f4deee5ca40c34420c8800cf1cadc3f936991f3330d6c8bc4914",
+        "exit_code": 0,
+        "image_id": "sha256:6ca9f94394cf7c615ef9afa021bd7da20074c5eee955bf49dc5bc757158b04d3",
+        "cleanup_complete": true
+      }
+    ]
+  },
+  "live": {
+    "status": "deferred_by_operator",
+    "gemini_verified": false,
+    "github_source_verified": false,
+    "github_publication_verified": false,
+    "real_pr_url": null
+  },
+  "phase11_browser_acceptance": {
+    "status": "passed",
+    "source": "user_confirmed_manual_dashboard_run",
+    "job_id": "802d2957d6ef48d182a8b04919e34165"
+  }
+}
